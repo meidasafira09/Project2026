@@ -1,8 +1,8 @@
 version: "3"
-services:
 
+services:
   selenium:
-    image: selenium/standalone-chrome
+    image: selenium/standalone-chrome:4.18.1
     ports:
       - "4444:4444"
 
@@ -10,5 +10,11 @@ services:
     build: .
     depends_on:
       - selenium
-    environment:
-      - SELENIUM_REMOTE_URL=http://selenium:4444/wd/hub
+    volumes:
+      - .:/app
+    working_dir: /app
+    entrypoint: >
+      sh -c "
+      sleep 10 &&
+      robot --outputdir result_report .
+      "
