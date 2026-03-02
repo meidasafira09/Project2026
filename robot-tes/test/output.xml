@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.12 on linux)" generated="20260301 23:23:02.682" rpa="false" schemaversion="3">
+<suite id="s1" name="Test Login" source="/home/meida/Downloads/MyProject/Project2026/robot-docker/test/test_login.robot">
+<test id="s1-t1" name="Open Herokuapp" line="5">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://the-internet.herokuapp.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20260301 23:23:03.139" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com'.</msg>
+<msg timestamp="20260301 23:23:04.962" level="WARN">The chromedriver version (106.0.5249.61) detected in PATH at /usr/bin/chromedriver might not be compatible with the detected chrome version (137.0.7151.119); currently, chromedriver 137.0.7151.119 is recommended for chrome 137.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg timestamp="20260301 23:23:06.819" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20260301 23:23:06.826" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 106
+Current browser version is 137.0.7151.119 with binary path /usr/bin/google-chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+#0 0x5701e5a4d2c3 &lt;unknown&gt;
+#1 0x5701e585683a &lt;unknown&gt;
+#2 0x5701e5880072 &lt;unknown&gt;
+#3 0x5701e587b82d &lt;unknown&gt;
+#4 0x5701e5877546 &lt;unknown&gt;
+#5 0x5701e58b5de6 &lt;unknown&gt;
+#6 0x5701e58b574f &lt;unknown&gt;
+#7 0x5701e58add63 &lt;unknown&gt;
+#8 0x5701e58827e3 &lt;unknown&gt;
+#9 0x5701e5883a21 &lt;unknown&gt;
+#10 0x5701e5a9b18e &lt;unknown&gt;
+#11 0x5701e5a9e622 &lt;unknown&gt;
+#12 0x5701e5a81aae &lt;unknown&gt;
+#13 0x5701e5a9f2a3 &lt;unknown&gt;
+#14 0x5701e5a75ecf &lt;unknown&gt;
+#15 0x5701e5abf588 &lt;unknown&gt;
+#16 0x5701e5abf706 &lt;unknown&gt;
+#17 0x5701e5ad98b2 &lt;unknown&gt;
+#18 0x73af97a94ac3 &lt;unknown&gt;
+</msg>
+<status status="FAIL" starttime="20260301 23:23:03.138" endtime="20260301 23:23:06.840"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>The Internet</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="NOT RUN" starttime="20260301 23:23:06.843" endtime="20260301 23:23:06.844"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20260301 23:23:06.845" endtime="20260301 23:23:06.845"/>
+</kw>
+<status status="FAIL" starttime="20260301 23:23:03.136" endtime="20260301 23:23:06.848">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 106
+Current browser version is 137.0.7151.119 with binary path /usr/bin/google-chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+#0 0x5701e5a4d2c3 &lt;unknown&gt;
+#1 0x5701e585683a &lt;unknown&gt;
+#2 0x5701e5880072 &lt;unknown&gt;
+#3 0x5701e587b82d &lt;unknown&gt;
+#4 0x5701e5877546 &lt;unknown&gt;
+#5 0x5701e58b5de6 &lt;unknown&gt;
+#6 0x5701e58b574f &lt;unknown&gt;
+#7 0x5701e58add63 &lt;unknown&gt;
+#8 0x5701e58827e3 &lt;unknown&gt;
+#9 0x5701e5883a21 &lt;unknown&gt;
+#10 0x5701e5a9b18e &lt;unknown&gt;
+#11 0x5701e5a9e622 &lt;unknown&gt;
+#12 0x5701e5a81aae &lt;unknown&gt;
+#13 0x5701e5a9f2a3 &lt;unknown&gt;
+#14 0x5701e5a75ecf &lt;unknown&gt;
+#15 0x5701e5abf588 &lt;unknown&gt;
+#16 0x5701e5abf706 &lt;unknown&gt;
+#17 0x5701e5ad98b2 &lt;unknown&gt;
+#18 0x73af97a94ac3 &lt;unknown&gt;
+</status>
+</test>
+<status status="FAIL" starttime="20260301 23:23:02.687" endtime="20260301 23:23:06.855"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Test Login">Test Login</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20260301 23:23:04.962" level="WARN">The chromedriver version (106.0.5249.61) detected in PATH at /usr/bin/chromedriver might not be compatible with the detected chrome version (137.0.7151.119); currently, chromedriver 137.0.7151.119 is recommended for chrome 137.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>
