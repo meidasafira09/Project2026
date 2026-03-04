@@ -28,3 +28,20 @@ jobs:
         with:
           name: robot-report
           path: result_report/
+
+      - name: Send Slack Notification
+        if: always()
+        run: |
+          PASS=$(grep -oP 'pass="\K[0-9]+' result_report/output.xml | head -1)
+          FAIL=$(grep -oP 'fail="\K[0-9]+' result_report/output.xml | head -1)
+
+          STATUS="✅ PASSED"
+          if [ "$FAIL" != "0" ]; then
+            STATUS="❌ FAILED"
+          fi
+
+          RUN_URL="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+
+          curl -X POST -H 'Content-type: application/json' \
+          --data "{\"text\":\"🤖 Robot Test Result\nStatus: $STATUS\nPassed: $PASS\nFailed: $FAIL\nDetails: $RUN_URL\"}" \
+          ${{ secrets.SLACK_WEBHOOK_URL }}
